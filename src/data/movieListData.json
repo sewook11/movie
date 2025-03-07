@@ -1,0 +1,29 @@
+{
+    "page": 1,
+    "results": [
+        {
+            "id": 823464,
+            "title": "고질라 X 콩: 뉴 엠파이어",
+            "poster_path": "/4z1VMmlxHrziG45901esjB4dpIa.jpg",
+            "vote_average": 7.2,
+            "genre_ids": [878, 28, 12],
+            "release_date": "2024-03-27"
+        },
+        {
+            "id": 653346,
+            "title": "혹성탈출: 새로운 시대",
+            "poster_path": "/plNOSbqkSuGEK2i15A5btAXtB7t.jpg",
+            "vote_average": 7.1,
+            "genre_ids": [878, 12, 28],
+            "release_date": "2024-05-08"
+        },
+        {
+            "id": 1011985,
+            "title": "쿵푸팬더 4",
+            "poster_path": "/1ZNOOMmILNUzVYbzG1j7GYb5bEV.jpg",
+            "vote_average": 7.1,
+            "genre_ids": [16, 28, 10751, 35, 14],
+            "release_date": "2024-03-02"
+        }
+    ]
+}
