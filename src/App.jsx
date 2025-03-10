@@ -1,12 +1,25 @@
 import React, { useEffect, useState } from "react";
-import MovieCard from "./data/MovieCard";
-import movieListData from "./data/movieListData.json";
+import MovieCard from "./components/MovieCard";
+
+const API_URL = "https://api.themoviedb.org/3/movie/popular";
+const API_TOKEN = import.meta.env.VITE_TMDB_ACCESS_TOKEN;
 
 const App = () => {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
-    setMovies(movieListData.results);
+    fetch(API_URL, {
+      headers: {
+        Authorization: `Bearer ${API_TOKEN}`,
+        "Content-Type": "application/json",
+      },
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        const filteredMovies = data.results.filter((movie) => !movie.adult);
+        setMovies(filteredMovies);
+      })
+      .catch((err) => console.error("Error fetching movies:", err));
   }, []);
 
   return (
@@ -29,3 +42,4 @@ const App = () => {
 };
 
 export default App;
+
